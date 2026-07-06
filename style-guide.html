@@ -56,7 +56,7 @@
   .type-row .sample { font-weight: var(--font-weight-bold); }
   .type-row .meta { font-size: var(--font-size-xs); color: var(--color-gray-500); font-family: monospace; white-space: nowrap; }
 
-  .btn { display: inline-flex; align-items: center; justify-content: center; font-weight: var(--font-weight-semibold); padding: var(--space-3) var(--space-6); border-radius: var(--radius-pill); text-decoration: none; font-size: var(--font-size-base); border: 2px solid transparent; cursor: pointer; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; font-weight: var(--font-weight-semibold); padding: var(--space-3) var(--space-6); border-radius: var(--radius-lg); text-decoration: none; font-size: var(--font-size-base); border: 2px solid transparent; cursor: pointer; }
   .btn-primary { background: var(--color-lime-400); color: var(--color-ink-900); border-color: var(--color-lime-400); }
   .btn-secondary { background: transparent; color: var(--color-lime-400); border-color: var(--color-lime-400); }
   .btn-secondary.on-light { color: var(--color-ink-900); border-color: var(--color-ink-900); }
@@ -135,7 +135,7 @@
 
   <section id="buttons">
     <h2 class="section-title">Buttons</h2>
-    <p class="lede">Primary/secondary pairing is the standard CTA pattern site-wide (e.g. "Try for free" + "Schedule demo").</p>
+    <p class="lede">Primary/secondary pairing is the standard CTA pattern site-wide (e.g. "Try for free" + "Schedule demo"). Corners use an 8px radius (<code>--radius-lg</code>), not a full pill.</p>
     <div class="btn-row">
       <button class="btn btn-primary">Try for free</button>
       <button class="btn btn-secondary on-light">Schedule demo</button>

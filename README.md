@@ -19,6 +19,8 @@ rounded corners.
 - [`docs/voice-and-content.md`](docs/voice-and-content.md) — tone, copy patterns, real CTA/heading examples
 - [`docs/brand-rules.md`](docs/brand-rules.md) — numbered rules for color, the signature cut, typography, layout, and CTAs across web/banner executions
 - [`icons/`](icons/) — the actual icon assets downloaded from heliotec.energy (see below)
+- [`logo/`](logo/) — white Heliotec wordmark (2500×894 PNG, from the site header)
+- [`backgrounds/`](backgrounds/) — brand gradient grounds (ink→indigo glow) used on the site and in ad banners
 
 ## How these values were sourced
 

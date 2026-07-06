@@ -102,6 +102,15 @@
   .rhythm { display: flex; flex-direction: column; gap: 2px; margin-top: var(--space-4); border-radius: var(--radius-md); overflow: hidden; }
   .rhythm .band { padding: var(--space-3) var(--space-4); font-size: var(--font-size-xs); font-family: monospace; }
 
+  /* Banner anatomy demo */
+  .banner-demo { position: relative; border-radius: var(--radius-xl); overflow: hidden; padding: var(--space-12); min-height: 300px; background: url("backgrounds/gradient-b-1920x1080.png") center / cover no-repeat, var(--color-ink-900); display: flex; align-items: flex-end; }
+  .banner-demo__copy { max-width: 60%; }
+  .banner-demo__headline { font-size: var(--font-size-2xl); font-weight: var(--font-weight-extrabold); line-height: 1.15; color: var(--color-white); margin: 0 0 16px; }
+  .banner-demo__headline span { color: var(--color-lime-400); }
+  .banner-demo__sub { font-size: var(--font-size-md); color: #ffffffb3; margin: 0 0 32px; }
+  .banner-demo__sub strong { color: var(--color-white); }
+  .banner-demo__logo { position: absolute; right: var(--space-12); bottom: var(--space-12); width: 120px; height: auto; }
+
   .icon-set { margin-top: var(--space-8); }
   .icon-set + .icon-set { margin-top: var(--space-12); }
   .icon-set h3 { font-size: var(--font-size-base); font-weight: var(--font-weight-semibold); margin: 0 0 var(--space-4); color: var(--color-gray-600); }
@@ -295,6 +304,19 @@
         <div class="band" style="background: var(--color-ink-900); color: var(--color-cream-200);">contact / footer — Ink 900</div>
       </div>
       <p class="measure">lime is a single accent moment per page — never two lime sections adjacent</p>
+    </div>
+
+    <div class="layout-demo">
+      <h3 style="font-size: var(--font-size-base); color: var(--color-gray-600);">Banner anatomy</h3>
+      <div class="banner-demo">
+        <div class="banner-demo__copy">
+          <p class="banner-demo__headline">Still thinking?<br/><span>Start with a free report.</span></p>
+          <p class="banner-demo__sub">No hardware. No commitment. <strong>Just energy data.</strong></p>
+          <button class="btn btn-primary">Get your free report</button>
+        </div>
+        <img class="banner-demo__logo" src="logo/heliotec-wordmark-white.png" alt="Heliotec" />
+      </div>
+      <p class="measure">brand gradient ground · two-tone headline (lime = the offer) · fragment copy, bold closer · web-style CTA · wordmark opposite the CTA</p>
     </div>
   </section>
 

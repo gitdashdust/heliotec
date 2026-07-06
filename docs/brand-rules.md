@@ -70,9 +70,37 @@ executions. Sourced from measured production CSS on heliotec.energy
     Hover is an opacity dip (0.85), not a color change. **[site]**
 22. Banner executions with room for only one button use the lime primary.
     The secondary never appears alone. **[ours]**
+23. **One CTA style everywhere.** Banners use the same button as the web:
+    sentence case, 8px radius, lime fill, ink label. The uppercase
+    near-pill CTA seen in older banners is deprecated. **[ours]**
+
+## Banners
+
+Patterns extracted from past ad executions (see also the deprecation note
+in rule 23). **[executions]**
+
+24. **Ground is the brand gradient, not flat ink.** Use the ink→indigo glow
+    (`backgrounds/gradient-b-1920x1080.png` or equivalent CSS gradient from
+    Ink 900 into indigo/purple) with subtle grain. The light source sits low
+    in the frame.
+25. **Two-tone headline.** Split the headline into a white phrase and a lime
+    phrase; lime always carries the hook or offer ("Start with a free
+    report." / "No hardware."). Each phrase ends in a full stop.
+26. **Copy is fragments, not sentences.** "No hardware. No commitment. Just
+    energy data." Bold the closing fragment for punch.
+27. **Show the product.** A real dashboard screenshot in browser chrome is
+    the proof device. It bleeds off at least one edge — angled, cropped, or
+    split from the copy zone on a diagonal (echoing the signature cut).
+    Never float a screenshot fully inside the frame with margins around it.
+28. **Logo and CTA take opposite corners.** White wordmark, always on the
+    dark ground, never on lime or over the screenshot.
+29. **Lime edge frame** (a thin lime border or bleed on one or two edges) is
+    an optional accent device — use it when the layout has no other lime
+    moment besides the CTA.
 
 ## Banner quick recipe
 
-Ink 900 ground · eyebrow in lime · extrabold sentence-case headline in
-cream/white · one stat at display size if space allows (on a lime
-signature-sm block) · lime primary CTA at 8px radius · scrim any photography.
+Brand gradient ground (ink→indigo, grainy) · two-tone headline, lime on the
+offer phrase, full stops · fragment subcopy with a bold closer · dashboard
+screenshot bleeding off an edge · lime primary CTA, sentence case, 8px
+radius · white wordmark in the opposite corner to the CTA.

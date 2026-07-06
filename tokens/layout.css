@@ -13,10 +13,27 @@
   --radius-pill: 9999px;
   --radius-circle: 50%;
 
-  /* Signature single-corner "cut" shape used on image containers and
-     feature cards — a distinctive Heliotec motif, not a generic radius. */
-  --radius-signature-sm: 24px 0 0 0;
-  --radius-signature-lg: 72px 0 0 0;
+  /* Signature "cut" shapes — a distinctive Heliotec motif, not a generic
+     radius. sm is a diagonal cut (top-left + bottom-right, as shipped on
+     .stat-section__main-stat: border-radius:24px 0); lg is a single large
+     top-left cut (72px 0 0). Rule: signature-lg only on full-width blocks;
+     use signature-sm for anything narrower. */
+  --radius-signature-sm: 24px 0;
+  --radius-signature-lg: 72px 0 0;
+
+  /* ---- Containers (from production layout rules) ---- */
+  --container-hero: 1467px;   /* hero inner, with calc(100% - 8vw) gutter */
+  --container-content: 1200px; /* standard section inner */
+  --container-narrow: 900px;   /* text-heavy blocks */
+  --container-prose: 600px;    /* single-column copy */
+
+  /* ---- Section padding tiers ---- */
+  --section-pad-desktop: 80px 40px;
+  --section-pad-tablet: 60px 24px;
+  --section-pad-mobile: 48px 20px;
+
+  /* ---- Eyebrow convention (uppercase section labels) ---- */
+  --eyebrow-tracking: 0.1em;
 
   /* ---- Spacing scale (8px base grid, inferred from layout gaps) ---- */
   --space-1: 0.25rem;

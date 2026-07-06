@@ -17,6 +17,7 @@ rounded corners.
 - [`tokens/tokens.json`](tokens/tokens.json) — same tokens in a flat JSON format (Style Dictionary / Figma Tokens compatible shape)
 - [`style-guide.html`](style-guide.html) — open in a browser to see every token rendered (colors, type scale, buttons, stat blocks, cards, radius scale)
 - [`docs/voice-and-content.md`](docs/voice-and-content.md) — tone, copy patterns, real CTA/heading examples
+- [`docs/brand-rules.md`](docs/brand-rules.md) — numbered rules for color, the signature cut, typography, layout, and CTAs across web/banner executions
 - [`icons/`](icons/) — the actual icon assets downloaded from heliotec.energy (see below)
 
 ## How these values were sourced

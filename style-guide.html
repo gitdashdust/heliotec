@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Heliotec Design System — Style Guide</title>
+<link rel="stylesheet" href="tokens/colors.css" />
+<link rel="stylesheet" href="tokens/typography.css" />
+<link rel="stylesheet" href="tokens/layout.css" />
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: var(--font-family-base);
+    background: var(--color-cream-200);
+    color: var(--color-ink-900);
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: var(--space-16) var(--space-6); }
+  header.hero {
+    background: var(--color-ink-900);
+    color: var(--color-white);
+    padding: var(--space-24) var(--space-6);
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.08em;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-lime-400);
+    border: 1px solid var(--color-ink-700);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-pill);
+    margin-bottom: var(--space-4);
+  }
+  h1.display {
+    font-size: var(--font-size-5xl);
+    line-height: var(--line-height-tight);
+    font-weight: var(--font-weight-extrabold);
+    margin: 0 0 var(--space-4);
+  }
+  h2.section-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 var(--space-2);
+  }
+  section { margin-top: var(--space-24); }
+  p.lede { font-size: var(--font-size-md); color: var(--color-gray-600); max-width: 640px; }
+
+  .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: var(--space-4); margin-top: var(--space-8); }
+  .swatch { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-gray-200); background: var(--color-white); }
+  .swatch .fill { height: 72px; }
+  .swatch .label { padding: var(--space-2) var(--space-3); font-size: var(--font-size-sm); }
+  .swatch .label code { display: block; color: var(--color-gray-600); font-size: var(--font-size-xs); }
+
+  .type-row { display: flex; align-items: baseline; gap: var(--space-6); border-bottom: 1px solid var(--color-gray-200); padding: var(--space-4) 0; }
+  .type-row .sample { font-weight: var(--font-weight-bold); }
+  .type-row .meta { font-size: var(--font-size-xs); color: var(--color-gray-500); font-family: monospace; white-space: nowrap; }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; font-weight: var(--font-weight-semibold); padding: var(--space-3) var(--space-6); border-radius: var(--radius-pill); text-decoration: none; font-size: var(--font-size-base); border: 2px solid transparent; cursor: pointer; }
+  .btn-primary { background: var(--color-lime-400); color: var(--color-ink-900); }
+  .btn-secondary { background: transparent; color: var(--color-white); border-color: var(--color-white); }
+  .btn-secondary.on-light { color: var(--color-ink-900); border-color: var(--color-ink-900); }
+  .btn-row { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-6); }
+
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--space-6); margin-top: var(--space-8); }
+  .stat { background: var(--color-ink-800); color: var(--color-white); padding: var(--space-6); border-radius: var(--radius-signature-sm); }
+  .stat .num { font-size: var(--font-size-3xl); font-weight: var(--font-weight-extrabold); color: var(--color-lime-400); display: block; }
+  .stat .label { font-size: var(--font-size-sm); color: var(--overlay-white-soft, #ffffffb3); }
+
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-6); margin-top: var(--space-8); }
+  .card { background: var(--color-white); border: 1px solid var(--color-gray-200); border-radius: var(--radius-signature-lg); padding: var(--space-6); }
+  .card h3 { font-size: var(--font-size-lg); margin: 0 0 var(--space-2); }
+  .card p { font-size: var(--font-size-base); color: var(--color-gray-600); margin: 0 0 var(--space-4); }
+  .card a { color: var(--color-indigo-500); font-weight: var(--font-weight-semibold); text-decoration: none; font-size: var(--font-size-sm); }
+
+  .radius-grid { display: flex; gap: var(--space-6); flex-wrap: wrap; margin-top: var(--space-8); }
+  .radius-demo { width: 96px; height: 96px; background: var(--color-indigo-500); display: flex; align-items: flex-end; justify-content: center; color: white; font-size: var(--font-size-xs); padding-bottom: var(--space-2); }
+
+  footer { background: var(--color-ink-900); color: var(--overlay-white-soft, #ffffffb3); padding: var(--space-16) var(--space-6); margin-top: var(--space-24); font-size: var(--font-size-sm); text-align: center; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap" style="padding:0;">
+    <span class="eyebrow">MULTI-SITE ENERGY MANAGEMENT</span>
+    <h1 class="display">Heliotec<br/>Design System</h1>
+    <p class="lede" style="color:#ffffffb3;">Tokens, type, color and component patterns reverse-engineered
+      from the live production site at heliotec.energy — colors and sizes below are the
+      actual values shipping today, not approximations.</p>
+    <div class="btn-row">
+      <button class="btn btn-primary">Try for free</button>
+      <button class="btn btn-secondary">Schedule demo</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section id="color">
+    <h2 class="section-title">Color</h2>
+    <p class="lede">Ink (near-black navy) dominates dark sections; lime is the sole high-saturation
+      accent reserved for primary actions and key numbers; indigo is used sparingly for links/highlights.</p>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="fill" style="background:var(--color-ink-900)"></div><div class="label">Ink 900<code>#0A0C14</code></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--color-ink-800)"></div><div class="label">Ink 800<code>#1C1E27</code></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--color-ink-700)"></div><div class="label">Ink 700<code>#2E3040</code></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--color-lime-400)"></div><div class="label">Lime 400<code>#EAF672</code></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--color-indigo-500)"></div><div class="label">Indigo 500<code>#4A54F2</code></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--color-cream-200)"></div><div class="label">Cream 200<code>#EDEDE3</code></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--color-gray-600)"></div><div class="label">Gray 600<code>#555555</code></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--color-success)"></div><div class="label">Success<code>#3A6B00</code></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--color-danger)"></div><div class="label">Danger<code>#C0392B</code></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--color-coral)"></div><div class="label">Coral<code>#FF6A61</code></div></div>
+    </div>
+  </section>
+
+  <section id="type">
+    <h2 class="section-title">Typography</h2>
+    <p class="lede">Font stack: Helvetica Neue, Arial, sans-serif — the system stack the live site
+      currently ships (no custom webfont loaded). Scale consolidated from observed font sizes.</p>
+    <div style="margin-top: var(--space-6);">
+      <div class="type-row"><span class="sample" style="font-size:var(--font-size-6xl)">Aa</span><span class="meta">6.4rem / extrabold — hero display</span></div>
+      <div class="type-row"><span class="sample" style="font-size:var(--font-size-5xl)">Aa</span><span class="meta">4.8rem / extrabold — hero headline</span></div>
+      <div class="type-row"><span class="sample" style="font-size:var(--font-size-4xl)">Aa</span><span class="meta">3.64rem / bold — page heading</span></div>
+      <div class="type-row"><span class="sample" style="font-size:var(--font-size-3xl)">Aa</span><span class="meta">2.86rem / extrabold — stat number</span></div>
+      <div class="type-row"><span class="sample" style="font-size:var(--font-size-2xl)">Aa</span><span class="meta">2.4rem / bold — section heading</span></div>
+      <div class="type-row"><span class="sample" style="font-size:var(--font-size-xl)">Aa</span><span class="meta">1.9rem / semibold — subhead</span></div>
+      <div class="type-row"><span class="sample" style="font-size:var(--font-size-lg)">Aa</span><span class="meta">1.5rem / semibold — card title</span></div>
+      <div class="type-row"><span class="sample" style="font-size:var(--font-size-base)">Aa</span><span class="meta">1rem / regular — body</span></div>
+      <div class="type-row"><span class="sample" style="font-size:var(--font-size-sm)">Aa</span><span class="meta">0.85rem / medium — caption</span></div>
+      <div class="type-row"><span class="sample" style="font-size:var(--font-size-xs)">Aa</span><span class="meta">0.75rem / semibold — eyebrow label</span></div>
+    </div>
+  </section>
+
+  <section id="buttons">
+    <h2 class="section-title">Buttons</h2>
+    <p class="lede">Primary/secondary pairing is the standard CTA pattern site-wide (e.g. "Try for free" + "Schedule demo").</p>
+    <div class="btn-row">
+      <button class="btn btn-primary">Try for free</button>
+      <button class="btn btn-secondary on-light">Schedule demo</button>
+    </div>
+  </section>
+
+  <section id="stats">
+    <h2 class="section-title">Stat blocks</h2>
+    <p class="lede">Numbers are the hero — used to lead with proof (savings, clients, CO2 eliminated) rather than adjectives.</p>
+    <div class="stat-grid">
+      <div class="stat"><span class="num">£2.3m</span><span class="label">Identified energy waste</span></div>
+      <div class="stat"><span class="num">150+</span><span class="label">Clients across the UK</span></div>
+      <div class="stat"><span class="num">2,000t</span><span class="label">CO2 emissions eliminated</span></div>
+      <div class="stat"><span class="num">5–25%</span><span class="label">Average cost savings</span></div>
+    </div>
+  </section>
+
+  <section id="cards">
+    <h2 class="section-title">Capability cards</h2>
+    <p class="lede">Uses the signature single-corner "cut" shape (large radius on one corner only, square on the rest) instead of uniform rounded corners.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Monitoring</h3>
+        <p>Always-on visibility across your business premises, so problems surface before the bill does.</p>
+        <a href="#">+ Learn more</a>
+      </div>
+      <div class="card">
+        <h3>Portfolio management</h3>
+        <p>One operational view across all your sites. Connecting your existing meters, BMS and IoT devices.</p>
+        <a href="#">+ Learn more</a>
+      </div>
+      <div class="card">
+        <h3>Low carbon technology</h3>
+        <p>See which low-carbon measures are worth it for each site before you invest.</p>
+        <a href="#">+ Learn more</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="radius">
+    <h2 class="section-title">Radius scale</h2>
+    <div class="radius-grid">
+      <div class="radius-demo" style="border-radius:var(--radius-xs)">2px</div>
+      <div class="radius-demo" style="border-radius:var(--radius-md)">6px</div>
+      <div class="radius-demo" style="border-radius:var(--radius-xl)">12px</div>
+      <div class="radius-demo" style="border-radius:var(--radius-signature-sm)">signature sm</div>
+      <div class="radius-demo" style="border-radius:var(--radius-signature-lg)">signature lg</div>
+      <div class="radius-demo" style="border-radius:var(--radius-pill); width:140px;">pill</div>
+      <div class="radius-demo" style="border-radius:var(--radius-circle)">circle</div>
+    </div>
+  </section>
+
+</div>
+
+<footer>Heliotec Design System — tokens sourced from heliotec.energy production CSS, 2026-07-06</footer>
+
+</body>
+</html>

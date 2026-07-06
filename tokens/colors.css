@@ -1,0 +1,53 @@
+/*
+  Heliotec — Color Tokens
+  Extracted from the live site (heliotec.energy) CSS bundles on 2026-07-06.
+  Values below are the actual hex codes shipping in production, grouped
+  and named for reuse. See README.md for source notes and confidence levels.
+*/
+
+:root {
+  /* ---- Ink (primary dark surface) ---- */
+  --color-ink-900: #0A0C14; /* dominant background — hero, footer, dark sections */
+  --color-ink-800: #1C1E27; /* raised surface on dark bg (cards, panels) */
+  --color-ink-700: #2E3040; /* border/divider on dark bg */
+  --color-ink-950-purple: #160F3A; /* deep purple, used in dark gradient blends */
+
+  /* ---- Accent: Lime (primary CTA / energy accent) ---- */
+  --color-lime-400: #EAF672;
+  --color-lime-400-a15: #EAF67226; /* 15% alpha, tint fills */
+
+  /* ---- Accent: Indigo (secondary accent, links/highlights) ---- */
+  --color-indigo-500: #4A54F2;
+  --color-indigo-550: #4A5FF2;
+  --color-indigo-600: #4B4EDE;
+
+  /* ---- Cream (light surface) ---- */
+  --color-cream-100: #F3F3F0;
+  --color-cream-200: #EDEDE3; /* primary light-mode background */
+  --color-cream-300: #ECECE3;
+  --color-cream-400: #D8D8CE;
+
+  /* ---- Neutral white / black ---- */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* ---- Grayscale (text/borders) ---- */
+  --color-gray-900: #111111;
+  --color-gray-700: #333333;
+  --color-gray-600: #555555; /* default body copy on light bg */
+  --color-gray-500: #888888;
+  --color-gray-400: #AAAAAA;
+  --color-gray-300: #CCCCCC;
+  --color-gray-200: #D0D0D0;
+
+  /* ---- Utility ---- */
+  --color-success: #3A6B00; /* deep green — positive/savings indicators */
+  --color-danger: #C0392B;  /* error states */
+  --color-coral: #FF6A61;   /* alert/highlight accent, typically used at low opacity */
+
+  /* ---- Common alpha overlays (as seen in production CSS) ---- */
+  --overlay-scrim-heavy: rgba(0, 0, 0, 0.55);  /* image-to-text legibility scrim */
+  --overlay-white-soft: #FFFFFF80;
+  --overlay-white-faint: #FFFFFF40;
+  --overlay-ink-soft: #0A0C1480;
+}

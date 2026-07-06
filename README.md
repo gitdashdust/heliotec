@@ -17,6 +17,7 @@ rounded corners.
 - [`tokens/tokens.json`](tokens/tokens.json) — same tokens in a flat JSON format (Style Dictionary / Figma Tokens compatible shape)
 - [`style-guide.html`](style-guide.html) — open in a browser to see every token rendered (colors, type scale, buttons, stat blocks, cards, radius scale)
 - [`docs/voice-and-content.md`](docs/voice-and-content.md) — tone, copy patterns, real CTA/heading examples
+- [`icons/`](icons/) — the actual icon assets downloaded from heliotec.energy (see below)
 
 ## How these values were sourced
 
@@ -41,6 +42,21 @@ radius on exactly one corner, square elsewhere) are used on image containers
 and cards site-wide — this diagonal-cut look is a real brand signature, not
 an incidental style, and is preserved here as `--radius-signature-sm` /
 `--radius-signature-lg`.
+
+## Icons
+
+`icons/` contains the actual icon assets pulled from the live site (not
+recreated approximations):
+
+- `icons/grey/` — the default/inactive state icon set (13 icons, PNG)
+- `icons/yellow/` — the same icon set in the lime/yellow accent color, used for active states (11 icons, PNG)
+- `icons/blue/` — a smaller set of 4 metric icons (lighting, office, portfolio, sourcing) used in a blue variant
+- `icons/ui/` — inline SVGs transcribed from the site's markup: `menu.svg`, `chevron-left.svg`, `chevron-right.svg`, `linkedin.svg`
+- `favicon.webp` — the site favicon
+
+Not every icon exists in all three colors (e.g. "Statistics" and "Industry"
+only appear in yellow) — only the variants actually shipped are included.
+See the "Icons" section in `style-guide.html` for a full visual index.
 
 ## Usage
 

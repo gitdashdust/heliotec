@@ -76,6 +76,19 @@
   .radius-grid { display: flex; gap: var(--space-6); flex-wrap: wrap; margin-top: var(--space-8); }
   .radius-demo { width: 96px; height: 96px; background: var(--color-indigo-500); display: flex; align-items: flex-end; justify-content: center; color: white; font-size: var(--font-size-xs); padding-bottom: var(--space-2); }
 
+  .icon-set { margin-top: var(--space-8); }
+  .icon-set + .icon-set { margin-top: var(--space-12); }
+  .icon-set h3 { font-size: var(--font-size-base); font-weight: var(--font-weight-semibold); margin: 0 0 var(--space-4); color: var(--color-gray-600); }
+  .icon-set.on-dark { background: var(--color-ink-900); padding: var(--space-8); border-radius: var(--radius-xl); }
+  .icon-set.on-dark h3 { color: var(--overlay-white-soft, #ffffffb3); }
+  .icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: var(--space-4); }
+  .icon-tile { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); text-align: center; }
+  .icon-tile img, .icon-tile .ui-icon { width: 40px; height: 40px; object-fit: contain; }
+  .icon-tile span { font-size: var(--font-size-xs); color: var(--color-gray-500); word-break: break-word; }
+  .icon-set.on-dark .icon-tile span { color: var(--overlay-white-soft, #ffffffb3); }
+  .ui-icon { display: flex; align-items: center; justify-content: center; color: var(--color-lime-400); }
+  .ui-icon svg { width: 24px; height: 24px; }
+
   footer { background: var(--color-ink-900); color: var(--overlay-white-soft, #ffffffb3); padding: var(--space-16) var(--space-6); margin-top: var(--space-24); font-size: var(--font-size-sm); text-align: center; }
 </style>
 </head>
@@ -185,6 +198,81 @@
       <div class="radius-demo" style="border-radius:var(--radius-signature-lg)">signature lg</div>
       <div class="radius-demo" style="border-radius:var(--radius-pill); width:140px;">pill</div>
       <div class="radius-demo" style="border-radius:var(--radius-circle)">circle</div>
+    </div>
+  </section>
+
+  <section id="icons">
+    <h2 class="section-title">Icons</h2>
+    <p class="lede">Downloaded directly from heliotec.energy — a themed icon set shipped in three color
+      variants (grey for default/inactive states, yellow for the accent/active state, blue for a small
+      set of metric icons), plus a handful of inline UI SVGs (menu, carousel chevrons, LinkedIn mark).</p>
+
+    <div class="icon-set">
+      <h3>Grey — default state</h3>
+      <div class="icon-grid">
+        <div class="icon-tile"><img src="icons/grey/Heliotec Emblem_grey.png" alt="Heliotec Emblem"><span>Emblem</span></div>
+        <div class="icon-tile"><img src="icons/grey/Global_Technology_Grey.png" alt="Global Technology"><span>Global Technology</span></div>
+        <div class="icon-tile"><img src="icons/grey/Carbon_Savings_Grey.png" alt="Carbon Savings"><span>Carbon Savings</span></div>
+        <div class="icon-tile"><img src="icons/grey/Reporting_Grey.png" alt="Reporting"><span>Reporting</span></div>
+        <div class="icon-tile"><img src="icons/grey/Search_Grey.png" alt="Search"><span>Search</span></div>
+        <div class="icon-tile"><img src="icons/grey/Message_Grey.png" alt="Message"><span>Message</span></div>
+        <div class="icon-tile"><img src="icons/grey/FAQ_Grey.png" alt="FAQ"><span>FAQ</span></div>
+        <div class="icon-tile"><img src="icons/grey/Hospitality_Grey.png" alt="Hospitality"><span>Hospitality</span></div>
+        <div class="icon-tile"><img src="icons/grey/New_Build_Grey.png" alt="New Build"><span>New Build</span></div>
+        <div class="icon-tile"><img src="icons/grey/Sponsorship_Grey.png" alt="Sponsorship"><span>Sponsorship</span></div>
+        <div class="icon-tile"><img src="icons/grey/V-Sign_Grey_small.png" alt="V-Sign"><span>V-Sign</span></div>
+        <div class="icon-tile"><img src="icons/grey/+Solutions_Grey.png" alt="Solutions"><span>+Solutions</span></div>
+        <div class="icon-tile"><img src="icons/grey/Arrow Down_Grey_left.png" alt="Arrow Down"><span>Arrow Down</span></div>
+      </div>
+    </div>
+
+    <div class="icon-set on-dark">
+      <h3>Yellow — accent / active state</h3>
+      <div class="icon-grid">
+        <div class="icon-tile"><img src="icons/yellow/Heliotec Emblem_Yellow.png" alt="Heliotec Emblem"><span>Emblem</span></div>
+        <div class="icon-tile"><img src="icons/yellow/Global_Technology_Yellow.png" alt="Global Technology"><span>Global Technology</span></div>
+        <div class="icon-tile"><img src="icons/yellow/Carbon_Savings_Yellow.png" alt="Carbon Savings"><span>Carbon Savings</span></div>
+        <div class="icon-tile"><img src="icons/yellow/Reporting_Yellow.png" alt="Reporting"><span>Reporting</span></div>
+        <div class="icon-tile"><img src="icons/yellow/Statistics_Yellow.png" alt="Statistics"><span>Statistics</span></div>
+        <div class="icon-tile"><img src="icons/yellow/Industry_Yellow.png" alt="Industry"><span>Industry</span></div>
+        <div class="icon-tile"><img src="icons/yellow/Hospitality_Yellow.png" alt="Hospitality"><span>Hospitality</span></div>
+        <div class="icon-tile"><img src="icons/yellow/Supply_Level_Yellow.png" alt="Supply Level"><span>Supply Level</span></div>
+        <div class="icon-tile"><img src="icons/yellow/Day1_Yellow.png" alt="Day 1"><span>Day 1</span></div>
+        <div class="icon-tile"><img src="icons/yellow/Day2_Yellow.png" alt="Day 2"><span>Day 2</span></div>
+        <div class="icon-tile"><img src="icons/yellow/Gift_Yellow.png" alt="Gift"><span>Gift</span></div>
+      </div>
+    </div>
+
+    <div class="icon-set">
+      <h3>Blue — metric icons</h3>
+      <div class="icon-grid">
+        <div class="icon-tile"><img src="icons/blue/lighting_blue.png" alt="Lighting"><span>Lighting</span></div>
+        <div class="icon-tile"><img src="icons/blue/office_blue.png" alt="Office"><span>Office</span></div>
+        <div class="icon-tile"><img src="icons/blue/portfolio_blue.png" alt="Portfolio"><span>Portfolio</span></div>
+        <div class="icon-tile"><img src="icons/blue/sourcing_blue.png" alt="Sourcing"><span>Sourcing</span></div>
+      </div>
+    </div>
+
+    <div class="icon-set on-dark">
+      <h3>UI icons (inline SVG)</h3>
+      <div class="icon-grid">
+        <div class="icon-tile">
+          <div class="ui-icon"><svg width="24" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="0" width="26" height="2.5" rx="1.25" fill="currentColor"/><rect y="9" width="26" height="2.5" rx="1.25" fill="currentColor"/><rect y="18" width="26" height="2.5" rx="1.25" fill="currentColor"/></svg></div>
+          <span>Menu</span>
+        </div>
+        <div class="icon-tile">
+          <div class="ui-icon"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span>Chevron left</span>
+        </div>
+        <div class="icon-tile">
+          <div class="ui-icon"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 4L14 10L8 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span>Chevron right</span>
+        </div>
+        <div class="icon-tile">
+          <div class="ui-icon"><svg viewBox="23 23 64 64" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M86 86H73.9V65.8c0-4.8-.1-11-6.7-11-6.7 0-7.7 5.2-7.7 10.6V86H47.3V47h11.6v5.6h.2c1.6-3 5.5-6.2 11.3-6.2 12.1 0 14.3 8 14.3 18.3V86zM32.2 41.4a6.8 6.8 0 1 1 0-13.7 6.8 6.8 0 0 1 0 13.7zM38.3 86H26v-39h12.3v39z"/></svg></div>
+          <span>LinkedIn</span>
+        </div>
+      </div>
     </div>
   </section>
 

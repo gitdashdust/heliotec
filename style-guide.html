@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Heliotec Design System — Style Guide</title>
+<link rel="stylesheet" href="tokens/brand-colors.css" />
 <link rel="stylesheet" href="tokens/colors.css" />
 <link rel="stylesheet" href="tokens/typography.css" />
 <link rel="stylesheet" href="tokens/layout.css" />
@@ -50,6 +51,31 @@
   .swatch { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-gray-200); background: var(--color-white); }
   .swatch .fill { height: 72px; }
   .swatch .label { padding: var(--space-2) var(--space-3); font-size: var(--font-size-sm); }
+
+  /* Official brand palette — named columns with tint ramps */
+  .brand-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: var(--space-3); margin-top: var(--space-8); }
+  .brand-col { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-gray-200); }
+  .brand-col .head { padding: var(--space-4) var(--space-3); }
+  .brand-col .head .name { font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); display: block; }
+  .brand-col .head .hex { font-size: var(--font-size-xs); font-family: monospace; opacity: 0.75; }
+  .brand-col .head .role { font-size: var(--font-size-xs); opacity: 0.6; display: block; margin-top: 2px; }
+  .brand-col .step { height: 18px; }
+  .badge { display: inline-block; font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold); padding: 2px 8px; border-radius: var(--radius-pill); margin-left: var(--space-2); vertical-align: middle; }
+  .badge.official { background: var(--brand-energy); color: var(--color-ink-900); }
+  .gradient-band { height: 96px; border-radius: var(--radius-lg); margin-top: var(--space-6); background: var(--brand-gradient); }
+
+  /* Composite brand CTA (from the brand book) */
+  .cta-composite { display: inline-flex; align-items: stretch; border: 2px solid transparent; border-radius: 9999px; background:
+      linear-gradient(var(--color-ink-900), var(--color-ink-900)) padding-box,
+      linear-gradient(90deg, var(--brand-cloud), var(--brand-energy)) border-box;
+      padding: 6px 6px 6px 24px; gap: var(--space-6); }
+  .cta-composite.on-light { background:
+      linear-gradient(var(--color-cream-200), var(--color-cream-200)) padding-box,
+      linear-gradient(90deg, var(--brand-cloud), var(--brand-energy)) border-box; }
+  .cta-composite .topic { display: flex; align-items: center; color: var(--brand-cloud); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); white-space: nowrap; }
+  .cta-composite.on-light .topic { color: var(--color-ink-900); }
+  .cta-composite .go { display: inline-flex; align-items: center; background: var(--brand-energy); color: var(--color-black); font-weight: var(--font-weight-bold); font-size: var(--font-size-sm); letter-spacing: 0.04em; text-transform: uppercase; padding: 10px 22px; border-radius: 9999px; }
+  .cta-composite.two-line .topic { white-space: normal; max-width: 180px; line-height: 1.2; }
   .swatch .label code { display: block; color: var(--color-gray-600); font-size: var(--font-size-xs); }
 
   .type-row { display: flex; align-items: baseline; gap: var(--space-6); border-bottom: 1px solid var(--color-gray-200); padding: var(--space-4) 0; }
@@ -160,6 +186,65 @@
       <div class="swatch"><div class="fill" style="background:var(--color-success)"></div><div class="label">Success<code>#3A6B00</code></div></div>
       <div class="swatch"><div class="fill" style="background:var(--color-danger)"></div><div class="label">Danger<code>#C0392B</code></div></div>
       <div class="swatch"><div class="fill" style="background:var(--color-coral)"></div><div class="label">Coral<code>#FF6A61</code></div></div>
+    </div>
+  </section>
+
+  <section id="brand-palette">
+    <h2 class="section-title">Official brand palette <span class="badge official">Brand book</span></h2>
+    <p class="lede">The authoritative named palette from the Heliotec Visual Identity guide. ENERGY is the
+      lead colour (use strategically); VOLTAGE and ALARM are accents; DATA, TECH, LED, CLOUD and CONCRETE
+      are secondaries. Each accent/secondary ships a 10-step tint ramp. These supersede the
+      reverse-engineered values above where they differ — see docs/brand-book.md.</p>
+    <div class="brand-cols">
+      <div class="brand-col">
+        <div class="head" style="background:var(--brand-energy); color:var(--color-ink-900)"><span class="name">ENERGY</span><span class="hex">#EAF672</span><span class="role">Lead · PANTONE 923 C</span></div>
+      </div>
+      <div class="brand-col">
+        <div class="head" style="background:var(--brand-voltage); color:#fff"><span class="name">VOLTAGE</span><span class="hex">#4A52F2</span><span class="role">Accent · PANTONE 2726 C</span></div>
+      </div>
+      <div class="brand-col">
+        <div class="head" style="background:var(--brand-alarm); color:var(--color-ink-900)"><span class="name">ALARM</span><span class="hex">#FF6A61</span><span class="role">Accent</span></div>
+        <div class="step" style="background:var(--brand-alarm-3)"></div><div class="step" style="background:var(--brand-alarm-5)"></div><div class="step" style="background:var(--brand-alarm-7)"></div><div class="step" style="background:var(--brand-alarm-9)"></div>
+      </div>
+      <div class="brand-col">
+        <div class="head" style="background:var(--brand-data); color:#fff"><span class="name">DATA</span><span class="hex">#160F3A</span><span class="role">Secondary · gradients</span></div>
+        <div class="step" style="background:var(--brand-data-3)"></div><div class="step" style="background:var(--brand-data-5)"></div><div class="step" style="background:var(--brand-data-7)"></div><div class="step" style="background:var(--brand-data-9)"></div>
+      </div>
+      <div class="brand-col">
+        <div class="head" style="background:var(--brand-tech); color:#fff"><span class="name">TECH</span><span class="hex">#5A5D5B</span><span class="role">Secondary · anchor</span></div>
+        <div class="step" style="background:var(--brand-tech-3)"></div><div class="step" style="background:var(--brand-tech-5)"></div><div class="step" style="background:var(--brand-tech-7)"></div><div class="step" style="background:var(--brand-tech-9)"></div>
+      </div>
+      <div class="brand-col">
+        <div class="head" style="background:var(--brand-led); color:var(--color-ink-900)"><span class="name">LED</span><span class="hex">#6DD9FD</span><span class="role">Secondary · glow</span></div>
+        <div class="step" style="background:var(--brand-led-3)"></div><div class="step" style="background:var(--brand-led-5)"></div><div class="step" style="background:var(--brand-led-7)"></div><div class="step" style="background:var(--brand-led-9)"></div>
+      </div>
+      <div class="brand-col">
+        <div class="head" style="background:var(--brand-cloud); color:var(--color-ink-900)"><span class="name">CLOUD</span><span class="hex">#EDEDE3</span><span class="role">Secondary · light surface</span></div>
+      </div>
+      <div class="brand-col">
+        <div class="head" style="background:var(--brand-concrete); color:var(--color-ink-900)"><span class="name">CONCRETE</span><span class="hex">#F7F7EF</span><span class="role">Secondary</span></div>
+      </div>
+    </div>
+    <p class="lede" style="margin-top: var(--space-8);">The brand gradient — a deep purple→indigo glow built from the DATA family
+      (<code>#0D002C → #261D52 → #0F1C7C → #3B589E</code>), used for dynamic backgrounds:</p>
+    <div class="gradient-band"></div>
+  </section>
+
+  <section id="brand-cta">
+    <h2 class="section-title">Composite CTA <span class="badge official">Brand book</span></h2>
+    <p class="lede">The brand book's signature call-to-action: a <strong>topic text + button enclosed in one
+      stadium outline</strong>. The button fill is always ENERGY 100% with black uppercase text; the topic text is
+      CLOUD; the outline is a gradient from Cloud (left) to Energy (right). Corner radius equals the box height.
+      <strong>Note:</strong> the live site does not yet implement this — it ships plain 8px buttons instead.</p>
+    <div style="display:flex; flex-direction:column; gap:var(--space-6); margin-top:var(--space-8); align-items:flex-start;">
+      <div class="cta-composite">
+        <span class="topic">Free site energy assessment</span>
+        <span class="go">Get started</span>
+      </div>
+      <div class="cta-composite two-line">
+        <span class="topic">Take control of your energy today</span>
+        <span class="go">Get started</span>
+      </div>
     </div>
   </section>
 

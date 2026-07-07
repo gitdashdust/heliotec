@@ -11,12 +11,14 @@ rounded corners.
 
 ## Contents
 
-- [`tokens/colors.css`](tokens/colors.css) — color custom properties
+- [`tokens/brand-colors.css`](tokens/brand-colors.css) — **official** named brand palette (ENERGY, VOLTAGE, ALARM, DATA, TECH, LED, CLOUD, CONCRETE) with tint ramps + gradient stops, from the brand book. Authoritative.
+- [`tokens/colors.css`](tokens/colors.css) — color custom properties (reverse-engineered from the live site; see brand-book.md for where these differ from the official palette)
 - [`tokens/typography.css`](tokens/typography.css) — font stack, weights, type scale
 - [`tokens/layout.css`](tokens/layout.css) — radius, spacing, overlay tokens
 - [`tokens/tokens.json`](tokens/tokens.json) — same tokens in a flat JSON format (Style Dictionary / Figma Tokens compatible shape)
 - [`style-guide.html`](style-guide.html) — open in a browser to see every token rendered (colors, type scale, buttons, stat blocks, cards, radius scale)
 - [`docs/voice-and-content.md`](docs/voice-and-content.md) — tone, copy patterns, real CTA/heading examples
+- [`docs/brand-book.md`](docs/brand-book.md) — **authoritative** reference distilled from the official Heliotec Visual Identity brand guide (strategy/voice, logo, tagline, official palette, composite CTA, typography, iconography), with a reconciliation of where the live site diverges from the book
 - [`docs/brand-rules.md`](docs/brand-rules.md) — numbered rules for color, the signature cut, typography, layout, and CTAs across web/banner executions
 - [`icons/`](icons/) — the actual icon assets downloaded from heliotec.energy (see below)
 - [`logo/`](logo/) — white Heliotec wordmark (2500×894 PNG, from the site header)

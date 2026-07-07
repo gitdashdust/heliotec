@@ -1,0 +1,100 @@
+/*
+  Heliotec — OFFICIAL Brand Palette
+  Source: Heliotec Visual Identity / Brand Guide (Heliotec_Identitet_2026_22.01.pdf),
+  section "Our Color Palette". These are the AUTHORITATIVE brand colors with their
+  official names, Pantone and tint ramps — they supersede the reverse-engineered
+  values in colors.css where the two disagree. See docs/brand-book.md for the
+  reconciliation of book-vs-live-site differences.
+
+  Roles (from the book):
+    ENERGY  — LEAD color. Neon yellow, "the active flow of energy." Use strategically.
+    VOLTAGE — Accent. Electrifying blue for highlights/attention.
+    ALARM   — Accent. Red for CTAs, urgency, dynamic highlights.
+    DATA    — Secondary. Deep purple, used in gradients.
+    TECH    — Secondary. Authoritative dark grey anchor.
+    LED     — Secondary. Luminous blue for glows/light sources in imagery.
+    CLOUD   — Secondary. Clean open light surface.
+    CONCRETE— Near-white / "ordinary black" backgrounds (see note in colors.css).
+*/
+
+:root {
+  /* ---- Lead ---- */
+  --brand-energy: #EAF672;   /* PANTONE 923 C */
+
+  /* ---- Accents ---- */
+  --brand-voltage: #4A52F2;  /* PANTONE 2726 C — note: live site drifts to #4A54F2 / #4B4EDE */
+  --brand-alarm: #FF6A61;
+
+  /* ---- Secondaries ---- */
+  --brand-data: #160F3A;     /* deep purple — gradient base */
+  --brand-tech: #5A5D5B;     /* dark grey anchor */
+  --brand-led: #6DD9FD;      /* luminous glow blue */
+  --brand-cloud: #EDEDE3;
+  --brand-concrete: #F7F7EF;
+
+  /* ---- ENERGY has no printed ramp (single lead color) ---- */
+
+  /* ---- ALARM ramp (10) ---- */
+  --brand-alarm-1: #FF6A61;
+  --brand-alarm-2: #FF7971;
+  --brand-alarm-3: #FF8881;
+  --brand-alarm-4: #FF9790;
+  --brand-alarm-5: #FFA6A0;
+  --brand-alarm-6: #FFB5B0;
+  --brand-alarm-7: #FFC3C0;
+  --brand-alarm-8: #FFD2D0;
+  --brand-alarm-9: #FFE1DF;
+  --brand-alarm-10: #FFF0EF;
+
+  /* ---- DATA ramp (10) — deep purple → light ---- */
+  --brand-data-1: #160F3A;
+  --brand-data-2: #2D274E;
+  --brand-data-3: #453F61;
+  --brand-data-4: #5C5775;
+  --brand-data-5: #736F89;
+  --brand-data-6: #8B879D;
+  --brand-data-7: #A29FB0;
+  --brand-data-8: #B9B7C4;
+  --brand-data-9: #D0CFD8;
+  --brand-data-10: #E8E7EB;
+
+  /* ---- TECH ramp (10) — dark grey → light ---- */
+  --brand-tech-1: #5A5D5B;
+  --brand-tech-2: #6B6D6B;
+  --brand-tech-3: #7B7D7C;
+  --brand-tech-4: #8C8E8C;
+  --brand-tech-5: #9C9E9D;
+  --brand-tech-6: #ADAEAD;
+  --brand-tech-7: #BDBEBD;
+  --brand-tech-8: #CDCECE;
+  --brand-tech-9: #DEDFDE;
+  --brand-tech-10: #EFEFEF;
+
+  /* ---- LED ramp (10) — glow blue → white ---- */
+  --brand-led-1: #6DD9FD;
+  --brand-led-2: #7CDDFD;
+  --brand-led-3: #8AE1FD;
+  --brand-led-4: #99E4FE;
+  --brand-led-5: #A7E8FE;
+  --brand-led-6: #B6ECFE;
+  --brand-led-7: #C5F0FE;
+  --brand-led-8: #D3F4FE;
+  --brand-led-9: #E2F7FF;
+  --brand-led-10: #F0FBFF;
+
+  /* ---- LED support colors (glowing effects in imagery/illustration) ---- */
+  --brand-led-medium: #3894C7;
+  --brand-led-dark: #194D7F;
+  --brand-led-darkest: #062345;
+
+  /* ---- The DATA gradient stops (deep marketing backgrounds) ---- */
+  --brand-gradient-01: #0D002C; /* darkest */
+  --brand-gradient-02: #261D52;
+  --brand-gradient-03: #0F1C7C;
+  --brand-gradient-05: #474C86;
+  --brand-gradient-06: #3B589E;
+  --brand-gradient-07: #7489B4; /* lightest blue glow */
+
+  /* Canonical brand gradient: deep purple → indigo glow (bottom-left light source) */
+  --brand-gradient: linear-gradient(135deg, #0D002C 0%, #261D52 35%, #0F1C7C 70%, #3B589E 100%);
+}
